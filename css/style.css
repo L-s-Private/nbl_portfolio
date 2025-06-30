@@ -161,6 +161,66 @@ a {
   }
 }
 
+.skill-list {
+  /* list-style: none; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  li {
+    position: relative;
+    padding-left: 175px;
+    min-height: 150px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: solid 1px #333;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+}
+
+.about-wrapper {
+  display: flex;
+  max-width: 50rem;
+  margin-inline: auto;
+  gap: 2rem;
+  align-items: center;
+  img {
+    border-radius: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  p:nth-of-type(1) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-wrapper {
+  text-align: center;
+  address {
+    
+  }
+}
+
 footer {
   background-color: #333;
   color: #fff;
