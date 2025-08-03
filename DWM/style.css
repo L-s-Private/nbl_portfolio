@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.title {
+  width: 850px;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+}
+
+.title-mode {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #e54c21;
+}
+
+.title-mode::before,
+.title-mode::after {
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+}
+
+.title-mode::before {
+  margin-right: 1rem;
+  background: linear-gradient(to left, #e54c21, #3d3d3d);
+}
+
+.title-mode::after {
+  margin-left: 1rem;
+  background: linear-gradient(to right, #e54c21, #3d3d3d);
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: solid 2.5px #3d3d3d;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;
+  margin-bottom: 1rem;
+
+  span {
+    /* font-style: italic; */
+    font-weight: 500;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+.grayout-comment {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #535353;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 850px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+
+  /* a {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    background-color: #409abd;
+    color: white;
+    box-shadow: 0 5px 0 #3074a1;
+    text-decoration: none;
+  } */
+
+  ul {
+    display: flex;
+    gap: 2rem;
+    background: #f1f1f1;
+    padding: 1rem 7.5rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-size: 1.25rem;
+    gap: 2;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.tips-container {
+  p {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+  }
+  span {
+    color: white;
+    font-weight: 500;
+    background: #16191d;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* section {
+    font-size: 5rem;
+} */
