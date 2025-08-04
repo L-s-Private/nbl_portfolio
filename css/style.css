@@ -29,9 +29,9 @@ ul li {
   list-style: none;
 }
 
-p {
+/* p {
   word-break: auto-phrase;
-}
+} */
 
 .header {
   background-color: #fff;
@@ -120,6 +120,7 @@ a {
 }
 
 .hero-content {
+  position: relative;
   height: 70vh;
   /* calc()100vh - [header px] */
   text-align: center;
@@ -127,7 +128,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #cccccc;
+  color: white;
+  /* background-color: #000; */
 }
 
 @keyframes fadeIn {
@@ -184,10 +186,41 @@ a {
   }
 }
 
+.hero-title,
+.hero-text {
+  z-index: 1;
+  text-shadow: 0px 0px 25px rgb(0, 0, 0);
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 92px;
+  left: 0;
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.5;
+}
+
+.parallax-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-color: #000;
+}
+
 .content {
   padding: 10rem 0;
   &:nth-of-type(odd) {
     background-color: #f2f2f2;
+  }
+  &:nth-of-type(even) {
+    background-color: #ffffff;
   }
 }
 
@@ -242,14 +275,26 @@ a {
   }
 
   img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 1.75rem;
+    border: solid 2.5px rgba(173, 173, 173, 0.25);
+    /* border-radius: 50%; */
+  }
+
+  .skill-icon {
     position: absolute;
     top: 0;
     left: 0;
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 2.5rem;
-    /* border-radius: 50%; */
+    border: solid 2.5px rgba(173, 173, 173, 0.25);
   }
 
   h3 {
@@ -455,10 +500,16 @@ footer {
   .global-nav {
     font-size: 0.85rem;
     gap: 1rem;
+    display: none;
   }
 
-  .hero-content {
-    height: 100vh;
+  .hero-content,
+  .hero-bg-video {
+    height: 80vh;
+  }
+
+  .hero-bg-video {
+    top: 0;
   }
 
   .hero-title {
